@@ -23,7 +23,7 @@ export default function ContactForm({ onSubmit }) {
 
   const addContact = evt => {
     evt.preventDefault();
-    onSubmit({ name: name, number: number, id: nanoid() });
+    onSubmit({ name, number, id: nanoid() });
     setName('');
     setNumber('');
   };

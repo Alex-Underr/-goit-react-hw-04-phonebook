@@ -17,6 +17,12 @@ export default function ContactList({ contacts, onClick }) {
   );
 }
 ContactList.propTypes = {
-  contacts: PropTypes.array.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    }).isRequired
+  ),
   onClick: PropTypes.func.isRequired,
 };

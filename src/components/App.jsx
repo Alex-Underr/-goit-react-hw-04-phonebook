@@ -16,8 +16,8 @@ const useLocalStorage = (key, defaultValue) => {
 };
 
 export function App() {
-  const [contacts, setContacts] = useLocalStorage('contact', '');
-  const [filter, setFilter] = useLocalStorage('filter', '');
+  const [contacts, setContacts] = useLocalStorage('contact', []);
+  const [filter, setFilter] = useState('');
 
   const filteredContacts = () => {
     const toLower = filter.toLowerCase();
@@ -35,7 +35,7 @@ export function App() {
   const addContact = contact => {
     contacts.some(e => e.name === contact.name)
       ? alert(`${contact.name} is already in contacts`)
-      : setContacts([contact, ...contacts]);
+      : setContacts(prevState => [...prevState, contact]);
   };
 
   return (
