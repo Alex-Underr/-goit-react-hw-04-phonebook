@@ -15,10 +15,10 @@ h2 {
   --background: white;
   --border: rgba(0, 0, 0, 0.125);
   --borderRadius: 1.225rem;
-  background: white;
+  background: rgba(61, 145, 255, 0.133);
   border: 1px solid var(--border);
   border-radius: var(--borderRadius);
   box-shadow: 0 1rem 1rem -0.75rem var(--border);
-  margin: auto;
+  margin: 50px auto auto auto;
   padding: 2rem;
 }
